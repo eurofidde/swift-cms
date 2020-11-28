@@ -1,0 +1,18 @@
+.widget {
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 4px #bfbfbf;
+    margin-bottom: 2rem;
+
+    &-head {
+        border-bottom: 1px solid #dedede;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    &-body {
+        padding: 1rem;
+        // background-color: #e3e3e3;
+    }
+}
