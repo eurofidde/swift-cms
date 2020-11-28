@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    font-family: $font-roboto;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+body {
+    background-color: $color4;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 1rem;
+    font-weight: 100;
+}
+
+button {
+    &:hover {
+        color: $color5;
+        cursor: pointer;
+    }
+}
+
+form {
+    input {
+        padding: 0.5rem;
+        font-size: 1rem;
+        width: 100%;
+        border: 2px solid $color5;
+
+    }
+}
+
+button {
+    background-color: unset;
+    border: none;
+}
+
+.btn-ellipsis {
+    font-size: 1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50px;
+
+    &:hover, &::selection {
+        background-color: $color5;
+        color: black;
+    }
+}
+
+.btn-primary {
+    background-color: $color1;
+    color: $color3;
+    padding: 0.6rem;
+    min-width: 12rem;
+    border: 0;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $color5;
+    }
+}
+
+// Generic classes
+
+.box-btn {
+    background-color: $color3;
+    box-shadow: 1px 1px 7px $color5;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.5s;
+
+    &__close-btn {
+        top: 0;
+        right: 0;
+        margin: 1rem 1rem 0 0;
+        position: absolute;
+        background-color: unset;
+        border: none;
+        font-size: 1.5rem;
+        color: $color1;
+
+        &:hover {
+            color: $color5;
+        }
+    }
+
+    &__content {
+        padding: 3rem;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    &__btn {   
+        display: block;
+        width: 100%;
+        border: none;
+        padding:  1rem;
+        background-color: $color1;
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+
+        &:hover {
+            background-color: $color5;
+            cursor: pointer;
+
+            span {
+                color: $color2;
+            }
+        }
+
+        span {
+            font-size: 2rem;
+            color: white;
+            font-weight: 100;
+        }
+    }
+}
+
+.panel {
+    background-color: $color3;
+    box-shadow: 1px 1px 7px $color5;
+    padding: 2rem 3rem;
+    margin-bottom: 1rem;
+}
+
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1080px;
+}
+
+.wrapper-full {
+    padding: 0 2rem 0 6rem;
+}
+
+.wrapper-center {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+// Mixins
+
+@mixin pesudo-icon-base {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;    
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}

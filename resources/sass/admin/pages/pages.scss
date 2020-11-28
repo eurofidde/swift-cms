@@ -1,0 +1,55 @@
+/*
+    Pages Index
+*/
+.pages-index {
+    .pages-index--no-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    
+        &__inner {
+            text-align: center;
+    
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    
+    .box-btn {
+        width: 50%;
+        transform: scale(0);
+    }
+
+    .enabled {
+        transform: scale(1);
+    }
+
+    &__head {
+        margin: 1rem 0;
+    }
+
+    &__create-page {
+        position: absolute;
+        top: 0%;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__page {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1rem;
+    }
+
+    &__page-col {
+        
+    }
+
+
+}

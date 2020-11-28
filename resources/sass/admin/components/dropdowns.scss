@@ -1,0 +1,91 @@
+/*
+    Dropdown Dark
+*/
+.dropdown-dark {
+    position: relative;
+
+    &__toggle {
+
+        a { 
+            cursor: pointer;
+            &::after {
+                @include pesudo-icon-base;
+                padding-left: 0.3rem;
+                content: '\f078';
+            }
+        }
+    }
+
+    &__content {
+        transform: scale(0);
+        transition: 0.5s;
+        position: absolute;
+        background-color: $color1;
+        padding: 1rem;
+        box-shadow: 1px 1px 7px $color5;
+        
+        a {
+            color: $color3;
+        }
+    }
+
+    &:hover {
+        .dropdown-dark__content {
+            transform: scale(1);
+        }
+
+        .dropdown-dark__toggle {
+            a {
+                &:after {
+                    content: '\f077';
+                }
+            }
+        }
+    }
+}
+
+/*
+    Dropdown Light
+*/
+.dropdown-light {
+    position: relative;
+
+    &__toggle {
+
+        a { 
+            cursor: pointer;
+            &::after {
+                @include pesudo-icon-base;
+                padding-left: 0.3rem;
+                content: '\f078';
+            }
+        }
+    }
+
+    &__content {
+        transform: scale(0);
+        transition: 0.5s;
+        position: absolute;
+        background-color: $color1;
+        padding: 1rem;
+        box-shadow: 1px 1px 7px $color5;
+        
+        a {
+            color: $color3;
+        }
+    }
+
+    &:hover {
+        .dropdown-light__content {
+            transform: scale(1);
+        }
+
+        .dropdown-light__toggle {
+            a {
+                &:after {
+                    content: '\f077';
+                }
+            }
+        }
+    }
+}

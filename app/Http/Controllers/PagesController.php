@@ -22,17 +22,7 @@ class PagesController extends Controller
     public function index()
     {
         $pages = Pages::all();
-        return view('pages.pages', compact('pages'));
-    }
-
-    /**
-     * Create
-     * 
-     * Simpily returns the create page view
-     */
-    public function create()
-    {
-        return view('pages.create');
+        return view('admin.pages.pages-index', compact('pages'));
     }
 
     /**
@@ -44,16 +34,16 @@ class PagesController extends Controller
     {
         $validatedData = $request->validate([
             'title' => ['required', 'string', 'max:20'],
-            'body' => ['required', 'string'],
+            // 'body' => ['required', 'string'],
         ]);
 
         Pages::create([
             'title' => request('title'),
             'slug' => Str::of(request('title'))->slug('-'),
             // 'slug' => str_replace(' ', '-', request('title')),
-            'body' => request('body'),
+            'body' => '',
             'user_id' => auth()->user()->id,
-            'template' => 'default',
+            // 'template' => 'default',
         ]);
 
         return redirect('admin/pages');
@@ -70,7 +60,7 @@ class PagesController extends Controller
         $user = User::find($page->user_id);
         $templates = array_diff(str_replace('.blade.php', '', scandir(public_path('../resources/views/page-templates'))), array('..', '.'));
 
-        return view('pages.edit', compact('page', 'user', 'templates'));
+        return view('admin.pages.pages-edit', compact('page', 'user', 'templates'));
     }
 
     /**
